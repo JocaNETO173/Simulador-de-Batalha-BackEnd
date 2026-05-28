@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 2: Métodos</title>
+    <link rel="stylesheet" href="./metodos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jacquard+12&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <h2>⚔️ Simulador de Batalha - Módulo 2</h2>
+    
+    <div class="caixa" id="painel-criacao">
+        <label>Nome do Monstro:</label>
+        <input type="text" id="nomeMonstro"  >
+        <label>HP Inicial:</label>
+        <input type="number" id="hpMonstro" value="100" min="1">
+        <button class="btn-principal" onclick="iniciarJogo()">Dar Vida ao Monstro</button>
+    </div>
+
+    <div class="caixa painel-combate" id="painel-combate">
+        <h3 id="statusNome"></h3>
+        <h4 id="statusHp"></h4>
+        
+        <label>Quantidade de Dano para Aplicar:</label>
+        <input type="number" id="danoInput" value="15">
+        <button class="btn-atacar" onclick="baterNoMonstro()">Desferir Ataque</button>
+        
+        <p id="log" style="margin-top: 15px; font-style: italic; color: #ffeb3b; text-align: center;"></p>
+    </div>
+
+    <script src="./metodos.js">
+       
+    </script>
+</body>
+
+<!--
+Entendendo o nosso Mapa Visual (HTML e CSS)
+"Pessoal, antes de programarmos a inteligência do nosso jogo no JavaScript, 
+vamos entender como a nossa tela foi montada no HTML e CSS. Imaginem o HTML 
+como as paredes da nossa casa e o CSS como a pintura.
+ O que o CSS está fazendo?
+caixa: É a nossa fôrma padrão. Ela cria aquele quadrado cinza escuro com bordas 
+arredondadas onde tudo fica organizado.
+painel-combate { display: none; }: Esse é o nosso maior truque visual! O CSS está 
+dizendo: 'Esconda este painel por enquanto'. Por isso, quando a página abre, a tela 
+de luta não aparece. O JavaScript vai ser o responsável por mudar isso depois!
+
+O nosso jogo foi dividido em duas caixas (<div>) estratégicas:
+1. A Caixa de Criação (id="painel-criacao")É a primeira tela que o usuário vê. 
+Ela tem:
+Dois campos de digitação (<input>) para colher o Nome e o HP do monstro.
+Um botão azul que chama a função iniciarJogo().
+
+2. A Caixa de Combate (id="painel-combate")
+Esta caixa tem duas classes juntas: a caixa (para ficar bonita) e a painel-combate 
+(que a deixa invisível no começo). 
+Dentro dela temos:
+O local onde vamos injetar o nome e a vida atual do monstro (id="statusNome" e id="statusHp").
+Um campo para digitar o dano (id="danoInput").
+O botão laranja de atacar, que chama a função baterNoMonstro().
+Um parágrafo vazio (id="log") que vai funcionar como a tela do jogo, mostrando os 
+textos do que aconteceu."
+-->
+</html>

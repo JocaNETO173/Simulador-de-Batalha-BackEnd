@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio Módulo 2: Sistema de Cura</title>
+    <link rel="stylesheet" href="./metodo.css">
+</head>
+<body>
+
+    <h2>⚔️ Simulador de Batalha - Desafio Aluno</h2>
+    
+    <div class="caixa" id="painel-criacao">
+        <label>Nome do Monstro:</label>
+        <input type="text" id="nomeMonstro" placeholder="Ex: Orc Chefe">
+        <label>HP Inicial:</label>
+        <input type="number" id="hpMonstro" placeholder="Ex: 100">
+        <button class="btn-principal" onclick="iniciarJogo()">Dar Vida ao Monstro</button>
+    </div>
+
+    <div class="caixa painel-combate" id="painel-combate">
+        <h3 id="statusNome"></h3>
+        <h4 id="statusHp"></h4>
+        
+        <label>Quantidade de Dano para Aplicar:</label>
+        <input type="number" id="danoInput" placeholder="Ex: 15">
+        <button class="btn-atacar" onclick="baterNoMonstro()">Desferir Ataque</button>
+        
+        <label style="margin-top: 15px; display: block;">Quantidade de Cura para Aplicar:</label>
+        <input type="number" id="curaInput" placeholder="Ex: 10">
+        <button class="btn-curar" onclick="curarMonstro()">Usar Poção de Cura</button>
+        
+        <p id="log" style="margin-top: 15px; font-style: italic; color: #ffeb3b; text-align: center;"></p>
+    </div>
+
+    <script src="./metodo.js">
+        
+       
+    </script>
+</body>
+</html>
